@@ -1,0 +1,122 @@
+@media ( min-width: 992px )
+    .header
+        &__menu
+            &-link
+                &:hover
+                    color: $hover
+                    transition: 0.3s
+        &__sign
+            &-in
+                &:hover
+                    color: $hover
+                    transition: 0.3s
+        &__download
+            &:hover
+                background-color: $hover
+                transition: 0.3s
+
+    .start
+        &__button
+            &:hover
+                background-color: $hover
+                transition: 0.3s
+
+@media ( max-width: 1500px )
+    .container
+        max-width: 1200px
+
+@media ( max-width: 1270px )
+    .container
+        max-width: 992px
+
+    .header
+        &__menu
+            max-width: 444px
+        &__login
+            max-width: 222px
+
+@media ( max-width: 1070px )
+    .container
+        max-width: 840px
+    .header
+        &__menu
+            display: none
+            &-mobile
+                display: flex
+        &__login
+            display: none
+
+@media ( max-width: 900px )
+    .container
+        max-width: 768px
+
+    .start
+        &__image
+            width: 500px
+
+    .rating
+        &__title
+            max-width: 420px
+            font-size: 30px
+
+@media ( max-width: 800px )
+    .container
+        max-width: 667px
+    .start
+        &__image
+            width: 350px
+
+@media ( max-width: 700px )
+    .container
+        max-width: 567px
+    .circle
+        width: 100%
+        max-width: 100%
+    .start
+        &__blocks
+            flex-direction: column
+        &__block
+            text-align: center
+            &:nth-child(1)
+                margin-bottom: 70px
+        &__image
+            width: 100%
+            max-width: 100%
+
+    .rating
+        &__block
+            text-align: center
+            margin: 0 auto
+            flex-direction: column
+            &-rating
+                margin-bottom: 60px
+            &-status
+                flex-direction: row
+        &-likes
+            margin-right: 30px
+
+@media ( max-width: 600px )
+    .container
+        max-width: 480px
+
+@media ( max-width: 500px )
+    .container
+        max-width: 425px
+
+@media ( max-width: 450px )
+    .container
+        max-width: 320px
+    .start
+        &__title
+            font-size: 39px
+
+@media ( max-width: 360px )
+    .container
+        max-width: 87%
+
+@media ( max-width: 350px )
+    .start
+        &__image
+            display: none
+            &-adaptive
+                display: inline-block

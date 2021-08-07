@@ -1,0 +1,60 @@
+.header
+    margin-bottom: 50px
+    &__icon
+        display: inline-block
+        height: 32px
+    &__blocks
+        display: flex
+        align-items: center
+        justify-content: space-between
+        max-width: 1400px
+        padding-top: 25px
+    &__menu
+        display: flex
+        max-width: 507px
+        justify-content: space-between
+        flex-basis: 100%
+        margin-right: auto
+        margin-left: 110px
+        &-link
+            font-weight: 500
+            font-size: 18px
+            line-height: 20px
+        &-mobile
+            display: none
+            justify-content: space-between
+            flex-direction: column
+            align-items: end
+            width: 28px
+            height: 12px
+        &-line
+            &-big
+                display: inline-block
+                width: 28px
+                height: 3px
+                background-color: $mobile-menu-color
+            &-small
+                display: inline-block
+                width: 20px
+                height: 3px
+                background-color: $mobile-menu-color
+    &__login
+        display: flex
+        justify-content: space-between
+        max-width: 240px
+        align-items: center
+        flex-basis: 100%
+    &__sign-in
+        font-weight: 500
+        font-size: 18px
+        line-height: 20px
+    &__download
+        background-color: $default
+        width: 136px
+        height: 52px
+        border-radius: 6px
+    &__download span
+        font-weight: 500
+        font-size: 17px
+        line-height: 20px
+        color: #fff

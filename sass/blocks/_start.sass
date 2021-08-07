@@ -1,0 +1,39 @@
+.start
+    margin-bottom: 100px
+    &__blocks
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__block
+        &:nth-child(1)
+            &::after
+                content: ''
+                background-image: url(../img/start-vector.png)
+                background-repeat: no-repeat
+                background-size: 100%
+
+    &__title
+        font-weight: 600
+        font-size: 48px
+        line-height: 60px
+        margin-bottom: 16px
+    &__subtitle
+        font-weight: normal
+        font-size: 17px
+        line-height: 28px
+        max-width: 480px
+    &__button
+        width: 180px
+        height: 66px
+        background: #00ECD0
+        border-radius: 6px
+        margin-top: 34px
+    &__button span
+        font-weight: 500
+        font-size: 19px
+        line-height: 23px
+        color: #fff
+    &__image
+        width: 607px
+        &-adaptive
+            display: none
