@@ -89,6 +89,8 @@ function Fill()
    }
 }
 
+// slick slider
+
 $(document).on("ready", function () {
     $('.regular').slick({
         dots: true,

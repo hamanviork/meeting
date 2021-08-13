@@ -1,0 +1,164 @@
+:root
+    --primary-color: $default
+    --secondary-color: #fff
+
+.container-flex
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+.flex
+    background-color: rgba(#e6eef9, 0.4)
+    padding-top: 40px
+    padding-bottom: 40px
+    &__title
+        font-weight: 600
+        font-size: 48px
+        line-height: 64px
+        text-align: center
+        letter-spacing: -1px
+        text-transform: capitalize
+        margin-bottom: 20px
+    &__subtitle
+        display: inline-block
+        font-weight: normal
+        font-size: 16px
+        line-height: 30px
+        max-width: 542px
+        text-align: center
+        margin-bottom: 40px
+    &__blocks
+        max-width: 1155px
+        display: flex
+        margin-top: 75px
+    &__block
+        max-width: 355px
+        width: 100%
+        border: 1px solid #cacdd1
+        box-sizing: border-box
+        border-radius: 10px
+        padding-top: 22px
+        padding-bottom: 60px
+        margin-right: 45px
+        &:nth-child(3)
+            margin-right: 0
+    &__type
+        font-weight: 600
+        font-size: 24px
+        line-height: 48px
+        padding-right: 65px
+        padding-left: 41px
+    &__price
+        display: inline-block
+        font-weight: 600
+        font-size: 36px
+        line-height: 48px
+        padding-bottom: 37px
+        padding-left: 41px
+    &__checks
+        display: inline-block
+        margin-right: 65px
+        margin-left: 41px
+    &__item
+        display: flex
+        align-items: center
+        margin-bottom: 14px
+    &__item img
+        margin-right: 12px
+    &__block-button
+        margin-right: 65px
+        margin-left: 41px
+        width: 181px
+        height: 52px
+        background-color: $hover
+        border-radius: 6px
+        color: #fff
+        &-disable
+            background-color: #dbe7fb
+            color: $default
+            border-radius: 6px
+    &__block-button span
+        font-weight: normal
+        font-size: 16px
+        line-height: 20px
+    &__line
+        display: flex
+        border: 1px solid #cacdd1
+        width: 100%
+        margin-bottom: 38px
+
+.container-tabs
+    display: flex
+    align-items: center
+    justify-content: center
+
+.tabs
+    display: flex
+    position: relative
+    background-color: #d8e6fa
+    box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15)
+    padding: 0.75rem
+    border-radius: 6px // just a high number to create pill effect
+    *
+        z-index: 2
+
+input[type="radio"]
+    display: none
+
+.tab
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 54px
+    width: 200px
+    font-size: 1.25rem
+    font-weight: 500
+    border-radius: 6px
+    cursor: pointer
+    transition: color 0.15s ease-in
+
+.notification
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 2rem
+    height: 2rem
+    margin-left: 0.75rem
+    border-radius: 50%
+    background-color: var(--secondary-color)
+    transition: 0.15s ease-in
+
+input[type="radio"]
+    &:checked
+        & + label
+            color: var(--primary-color)
+
+            & > &
+                background-color: var(--primary-color)
+                color: #fff
+
+input[id="radio-1"]
+    &:checked
+        & ~ .glider
+            transform: translateX(0)
+
+input[id="radio-2"]
+    &:checked
+        & ~ .glider
+            transform: translateX(100%)
+
+input[id="radio-3"]
+    &:checked
+        & ~ .glider
+            transform: translateX(200%)
+
+.glider
+    position: absolute
+    display: flex
+    height: 54px
+    width: 200px
+    background-color: var(--secondary-color)
+    z-index: 1
+    border-radius: 6px
+    transition: 0.25s ease-out

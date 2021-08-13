@@ -1,5 +1,9 @@
 @media ( min-width: 992px )
     .header
+        &__icon
+            &:hover
+                transform: rotate(-3deg)
+                transition: 0.5s
         &__menu
             &-link
                 &:hover
@@ -13,13 +17,46 @@
         &__download
             &:hover
                 background-color: $hover
+                transform: rotate(-3deg)
                 transition: 0.3s
 
     .start
         &__button
             &:hover
                 background-color: $hover
+                transform: rotate(-3deg)
                 transition: 0.3s
+    .features
+        &__block
+            &-button
+                &:hover
+                    color: $hover
+                    transition: 0.3s
+
+    .integrate
+        &__button
+            &:hover
+                background-color: $default
+                transform: rotate(-3deg)
+                transition: 0.3s
+
+    .power
+        &__button
+            &:hover
+                background-color: $default
+                transform: rotate(-3deg)
+                transition: 0.5s
+
+    .flex
+        &__block, &-button
+            &:hover
+                background-color: #dbe7fb
+                color: $default
+                transition: 0.5s
+            &:hover
+                background-color: $hover
+                color: #fff
+                transition: 0.5s
 
 @media ( max-width: 1500px )
     .container
@@ -46,6 +83,29 @@
         &__login
             display: none
 
+    .integrate
+        &__blocks
+            flex-direction: column
+        &__block
+            text-align: center
+            align-items: center
+            &:nth-child(1)
+                margin-bottom: 40px
+
+    .power
+        margin-bottom: 90px
+        &__blocks
+            flex-wrap: wrap-reverse
+            justify-content: center
+            text-align: center
+        &__item
+            margin: auto
+            margin-bottom: 25px
+        &__image
+            transform: translateX(-35px)
+        &__block
+            margin-bottom: 30px
+
 @media ( max-width: 900px )
     .container
         max-width: 768px
@@ -58,6 +118,23 @@
         &__title
             max-width: 420px
             font-size: 30px
+
+    .features
+        margin-bottom: 35px
+        &__blocks
+            flex-direction: column
+            align-items: center
+        &__block
+            margin-bottom: 30px
+            align-items: center
+            text-align: center
+            &-title
+                font-size: 20px
+            &-subtitle
+                font-size: 14px
+                line-height: 24px
+            &-button
+                font-size: 20px
 
 @media ( max-width: 800px )
     .container
@@ -94,6 +171,8 @@
                 flex-direction: row
         &-likes
             margin-right: 30px
+    .tabs
+        transform: scale(0.6)
 
 @media ( max-width: 600px )
     .container
@@ -102,6 +181,9 @@
 @media ( max-width: 500px )
     .container
         max-width: 425px
+    .features
+        &__title
+            font-size: 30px
 
 @media ( max-width: 450px )
     .container
@@ -109,6 +191,20 @@
     .start
         &__title
             font-size: 39px
+    .integrate
+        &__title
+            font-size: 29px
+            line-height: 34px
+
+    .power
+        &__title
+            font-size: 32px
+        &__subtitle
+            font-size: 15px
+        &__item span
+            font-size: 15px
+        &__image
+            transform: translate(-24px)
 
 @media ( max-width: 360px )
     .container
@@ -120,3 +216,17 @@
             display: none
             &-adaptive
                 display: inline-block
+
+    .features
+        &__title
+            font-size: 24px
+        &__subtitle
+            font-size: 14px
+            line-height: 20px
+            letter-spacing: -0.02em
+            opacity: 0.5
+
+@media ( max-width: 305px )
+    .power
+        &__item span
+            font-size: 13px
