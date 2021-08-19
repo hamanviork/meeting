@@ -36,7 +36,7 @@ function images() {
                 }),
             ])
         )
-        .pipe(dest("dist/images"));
+        .pipe(dest("dist/img"));
 }
 
 // Сжимает файлы JavaScript
@@ -67,8 +67,11 @@ function styles() {
 function build() {
     return src(
         [
+            "app/css/normalize.css",
+            "app/css/slick-theme.css",
+            "app/css/slick.css",
             "app/css/style.min.css",
-            "app/fonts/**/*",
+            "app/css/fonts/**/*",
             "app/js/script.min.js",
             "app/**/*.html",
         ],
