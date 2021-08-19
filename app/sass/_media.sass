@@ -48,15 +48,15 @@
                 transition: 0.5s
 
     .flex
-        &__block, &-button
+        &__block
             &:hover
-                background-color: #dbe7fb
+                background-color: #ffffff65
                 color: $default
                 transition: 0.5s
-            &:hover
-                background-color: $hover
-                color: #fff
-                transition: 0.5s
+            &-button
+                &:hover
+                    transform: rotate(-3deg)
+                    transition: 0.5s
 
 @media ( max-width: 1500px )
     .container
@@ -71,6 +71,11 @@
             max-width: 444px
         &__login
             max-width: 222px
+
+    .footer
+        &__images
+            &-download
+                flex-direction: column
 
 @media ( max-width: 1070px )
     .container
@@ -106,6 +111,20 @@
         &__block
             margin-bottom: 30px
 
+    .flex
+        &__block
+            margin-right: 10px
+
+    .test
+        &__subtitle
+            font-size: 20px
+
+    .footer
+        &__block
+            &-2
+                max-width: 275px
+                margin-right: 33px
+
 @media ( max-width: 900px )
     .container
         max-width: 768px
@@ -135,6 +154,31 @@
                 line-height: 24px
             &-button
                 font-size: 20px
+
+    .flex
+        &__blocks
+            flex-direction: column
+        &__block
+            margin: 0
+            margin-bottom: 30px
+
+    .test
+        text-align: center
+        &__blocks
+            flex-direction: column
+        &__block
+            margin-bottom: 20px
+
+    .footer
+        &__block
+            &-2,&-3
+                flex-direction: column-reverse
+            &-2
+                max-width: 222px
+        &__ul
+            margin-bottom: 20px
+        &__line
+            margin-top: 20px
 
 @media ( max-width: 800px )
     .container
@@ -178,6 +222,24 @@
     .container
         max-width: 480px
 
+    .footer
+        &__blocks
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            text-align: center
+        &__block
+            &-1,&-2,&-3
+                margin: 0
+                display: flex
+                flex-direction: column
+                align-items: center
+                text-align: center
+                margin-bottom: 20px
+        &__li
+            &-text
+                font-size: 19px
+
 @media ( max-width: 500px )
     .container
         max-width: 425px
@@ -205,6 +267,10 @@
             font-size: 15px
         &__image
             transform: translate(-24px)
+
+    .footer
+        &__line
+            margin-top: 5px
 
 @media ( max-width: 360px )
     .container
