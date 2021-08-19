@@ -58,6 +58,12 @@
                     transform: rotate(-3deg)
                     transition: 0.5s
 
+    .footer
+        &__li-text a
+            &:hover
+                color: $hover
+                transition: 0.3s
+
 @media ( max-width: 1500px )
     .container
         max-width: 1200px
@@ -83,10 +89,36 @@
     .header
         &__menu
             display: none
+            text-align: center
             &-mobile
                 display: flex
+                &--active
+                    position: fixed
+                    right: 45px
+                    top: 35px
+            &--active
+                display: flex
+                margin: 0
+                flex-direction: column
+                height: 100%
+                max-height: 220px
+            &-line
+                &-big
+                    &--active
+                        transition: 0.5s
+                        transform: rotate(45deg)
+                &-small
+                    &--active
+                        width: 28px
+                        transition: 0.5s
+                        transform: rotate(-45deg)
         &__login
             display: none
+            &--active
+                display: flex
+                flex-direction: column
+                max-height: 80px
+                margin-bottom: 55px
 
     .integrate
         &__blocks

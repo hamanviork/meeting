@@ -41,9 +41,9 @@ function images() {
 
 // Сжимает файлы JavaScript
 function scripts() {
-    return src(["app/js/slick.min.js", "app/js/script.js"])
+    return src(["app/js/jquery-3.6.0.min.js", "app/js/slick.min.js", "app/js/script.js"])
         .pipe(concat("script.min.js")) // Сжимает
-        .pipe(uglify()) // JS компрессор, сжимает js файл
+        //.pipe(uglify()) // JS компрессор, сжимает js файл
         .pipe(dest("app/js")) // Выкидывает в папку js сжатый файл
         .pipe(browserSync.stream()); // Обновляет страницу
 }
